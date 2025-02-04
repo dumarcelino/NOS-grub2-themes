@@ -4,12 +4,12 @@
 Usage:  `./install.sh [OPTIONS...]`
 
 ```
-  -t, --theme     Background theme variant(s) [forest|mojave|mountain|wave] (default is forest)
+  -t, --theme     Background theme variant(s) [forest|mojave|aurora|wave] (default is forest)
   -p, --type      Theme style variant(s)      [window|float|sharp|blur] (default is window)
   -i, --side      Picture display side        [left|right] (default is left)
   -c, --color     Background color variant(s) [dark|light] (default is dark)
   -s, --screen    Screen display variant(s)   [1080p|2k|4k] (default is 1080p)
-  -l, --logo      Show a logo on picture      [default|system] (default: a mountain logo)
+  -l, --logo      Show a logo on picture      [default|system] (default: a aurora logo)
   -r, --remove    Remove/Uninstall theme      (must add theme options, default is Elegant-forest-window-left-dark)
   -b, --boot      Install theme into '/boot/grub' or '/boot/grub2'
   -h, --help      Show this help
@@ -18,10 +18,10 @@ Usage:  `./install.sh [OPTIONS...]`
 _If no options are used, a user interface `dialog` will show up instead_
 
 ### Examples:
- - Install mountain theme on 2k display device:
+ - Install aurora theme on 1080p display device:
 
 ```sh
-sudo ./install.sh -t mountain -s 2k
+sudo ./install.sh -t aurora -s 1080p
 ```
 
  - Install wave theme into /boot/grub/themes:
@@ -30,10 +30,10 @@ sudo ./install.sh -t mountain -s 2k
 sudo ./install.sh -b -t wave
 ```
 
- - Uninstall mountain theme:
+ - Uninstall aurora theme:
 
 ```sh
-sudo ./install.sh -r -t mountain
+sudo ./install.sh -r -t aurora
 ```
 
 ## Issues / tweaks:
@@ -71,6 +71,5 @@ sudo ./install.sh -r -t mountain
 
 ## Documents
 
-[Grub2 theme reference](https://wiki.rosalab.ru/en/index.php/Grub2_theme_/_reference)
+[Grub2 theme source](https://github.com/vinceliuice/Elegant-grub2-themes)
 
-[Grub2 theme tutorial](https://wiki.rosalab.ru/en/index.php/Grub2_theme_tutorial)
