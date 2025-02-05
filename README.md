@@ -1,75 +1,75 @@
 
-## Installation:
+## Instalação:
 
-Usage:  `./install.sh [OPTIONS...]`
+Uso: `./install.sh [OPÇÕES...]`
 
 ```
-  -t, --theme     Background theme variant(s) [forest|mojave|aurora|wave] (default is forest)
-  -p, --type      Theme style variant(s)      [window|float|sharp|blur] (default is window)
-  -i, --side      Picture display side        [left|right] (default is left)
-  -c, --color     Background color variant(s) [dark|light] (default is dark)
-  -s, --screen    Screen display variant(s)   [1080p|2k|4k] (default is 1080p)
-  -l, --logo      Show a logo on picture      [default|system] (default: a aurora logo)
-  -r, --remove    Remove/Uninstall theme      (must add theme options, default is Elegant-forest-window-left-dark)
-  -b, --boot      Install theme into '/boot/grub' or '/boot/grub2'
-  -h, --help      Show this help
+  -t, --theme Variantes do tema de fundo [forest|mojave|mountain|wave] (o padrão é forest)
+  -p, --type Variantes do estilo do tema [window|float|sharp|blur] (o padrão é janela)
+  -i, --side Lado da exibição da imagem [left|right] (o padrão é esquerda)
+  -c, --color Variantes da cor de fundo [dark|light] (o padrão é escuro)
+  -s, --screen Variantes da exibição da tela [1080p|2k|4k] (o padrão é 1080p)
+  -l, --logo Mostrar um logotipo na imagem [default|system] (padrão: o logo mountain)
+  -r, --remove Remover/Desinstalar tema (deve adicionar opções de tema, o padrão é Elegant-forest-window-left-dark)
+  -b, --boot Instalar tema em '/boot/grub' ou '/boot/grub2'
+  -h, --help Mostrar esta ajuda
 ```
 
-_If no options are used, a user interface `dialog` will show up instead_
+_Se nenhuma opção for usada, uma `caixa de diálogo` de interface de usuário será exibida_
 
-### Examples:
- - Install aurora theme on 1080p display device:
+### Exemplos:
+ - Instalar tema mountain em dispositivo de exibição 2k:
 
 ```sh
-sudo ./install.sh -t aurora -s 1080p
+sudo ./install.sh -t mountain -s 2k
 ```
 
- - Install wave theme into /boot/grub/themes:
+ - Instalar tema wave em /boot/grub/themes:
 
 ```sh
 sudo ./install.sh -b -t wave
 ```
 
- - Uninstall aurora theme:
+ - Desinstalar tema mountain:
 
 ```sh
-sudo ./install.sh -r -t aurora
+sudo ./install.sh -r -t mountain
 ```
 
-## Issues / tweaks:
+## Problemas/ajustes:
 
-### Correcting display resolution:
+### Corrigindo resolução de exibição:
 
- - On the grub screen, press `c` to enter the command line
- - Enter `vbeinfo` or `videoinfo` to check available resolutions
- - Open `/etc/default/grub`, and edit `GRUB_GFXMODE=[height]x[width]x32` to match your resolution
- - Finally, run `grub-mkconfig -o /boot/grub/grub.cfg` to update your grub config
+ - Na tela do grub, pressione `c` para entrar na linha de comando
+ - Digite `vbeinfo` ou `videoinfo` para verificar as resoluções disponíveis
+ - Abrir `/etc/default/grub` e edite `GRUB_GFXMODE=[height]x[width]x32` para corresponder à sua resolução
+ - Finalmente, execute `grub-mkconfig -o /boot/grub/grub.cfg` para atualizar sua configuração do grub
 
-### Setting a custom background:
+### Configurando um plano de fundo personalizado:
 
- - Make sure you have `imagemagick` installed, or at least something that provides `convert`
- - Find the resolution of your display, and make sure your background matches the resolution
-   - 1920x1080 >> 1080p
-   - 2560x1440 >> 2k
-   - 3840x2160 >> 4k
- - Place your custom background inside the root of the project, and name it `background.jpg`
- - Run the installer like normal, but with -s `[YOUR_RESOLUTION]` and -t `[THEME]` and -i `[ICON]`
-   - Make sure to replace `[YOUR_RESOLUTION]` with your resolution and `[THEME]` with the theme
+ - Certifique-se de ter `imagemagick` instalado ou pelo menos algo que forneça `convert`
+ - Encontre a resolução da sua tela e certifique-se de que seu plano de fundo corresponda à resolução
+ - 1920x1080 >> 1080p
+ - 2560x1440 >> 2k
+ - 3840x2160 >> 4k
+ - Coloque seu plano de fundo personalizado dentro da raiz do projeto e nomeie-o `background.jpg`
+ - Execute o instalador normalmente, mas com -s `[SUA_RESOLUÇÃO]` e -t `[TEMA]` e -i `[ÍCONE]`
+ - Certifique-se de para substituir `[SUA_RESOLUÇÃO]` pela sua resolução e `[TEMA]` pelo tema
 
-## Contributing:
- - If you made changes to icons, or added a new one:
-   - Delete the existing icon, if there is one
-   - Run `cd assets; ./render-all.sh`
- - Create a pull request from your branch or fork
- - If any issues occur, report then to the [issue](issues) page
+## Contribuindo:
+ - Se você fez alterações nos ícones ou adicionou um novo:
+ - Exclua o ícone existente, se houver um
+ - Execute `cd assets; ./render-all.sh`
+ - Crie uma solicitação de pull do seu branch ou fork
+ - Se ocorrer algum problema, informe-o na página [issue](issues)
 
-## Preview:
+## Visualização:
 ![preview-01](preview-01.jpg?raw=true)
 ![preview-02](preview-02.jpg?raw=true)
 ![preview-03](preview-03.jpg?raw=true)
 ![preview-04](preview-04.jpg?raw=true)
 
-## Documents
+## Documentos
 
-[Grub2 theme source](https://github.com/vinceliuice/Elegant-grub2-themes)
+[Referência do tema Grub2](https://github.com/vinceliuice/Elegant-grub2-themes)
 

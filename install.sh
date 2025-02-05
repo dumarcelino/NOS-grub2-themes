@@ -12,12 +12,12 @@ cat << EOF
 Usage: $0 [OPTION]...
 
 OPTIONS:
-  -t, --theme     Background theme variant(s) [forest|mojave|aurora|wave] (default is forest)
+  -t, --theme     Background theme variant(s) [forest|mojave|mountain|wave] (default is forest)
   -p, --type      Theme style variant(s)      [window|float|sharp|blur] (default is window)
   -i, --side      Picture display side        [left|right] (default is left)
   -c, --color     Background color variant(s) [dark|light] (default is dark)
   -s, --screen    Screen display variant(s)   [1080p|2k|4k] (default is 1080p)
-  -l, --logo      Show a logo on picture      [default|system] (default: a aurora logo)
+  -l, --logo      Show a logo on picture      [default|system] (default: a mountain logo)
   -r, --remove    Remove/Uninstall theme      (must add theme options, default is Elegant-forest-window-left-dark)
   -b, --boot      Install theme into '/boot/grub' or '/boot/grub2'
   -h, --help      Show this help
@@ -58,7 +58,7 @@ while [[ $# -gt 0 ]]; do
             themes+=("${THEME_VARIANTS[1]}")
             shift
             ;;
-          aurora)
+          mountain)
             themes+=("${THEME_VARIANTS[2]}")
             shift
             ;;
