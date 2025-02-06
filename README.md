@@ -18,10 +18,10 @@ Uso: `./install.sh [OPÇÕES...]`
 _Se nenhuma opção for usada, uma `caixa de diálogo` de interface de usuário será exibida_
 
 ### Exemplos:
- - Instalar tema mountain em dispositivo de exibição 2k:
+ - Instalar tema mountain em dispositivo de exibição 1080p:
 
 ```sh
-sudo ./install.sh -t mountain -s 2k
+sudo ./install.sh -t mountain -s 1080p
 ```
 
  - Instalar tema wave em /boot/grub/themes:
